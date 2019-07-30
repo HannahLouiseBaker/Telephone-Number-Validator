@@ -1,0 +1,54 @@
+<!DOCTYPE>
+<html>
+  <head>
+    <script type="text/JavaScript">
+    let telephoneCheck = () => {
+      let str = document.getElementById("phone").value;
+      console.log(str);
+      let spaces = /[\s]/g;
+      let noSpaceStr = str.replace(spaces, '');
+      let format = /^((\d{6})|(1\d{6})|(\d{3}-\d{3}-)|(\(\d{3}\)\d{3}-)|(1\d{3}-\d{3}-)|(1\(\d{3}\)\d{3}-))\d{4}$/;
+      if (format.test(noSpaceStr)) {
+        alert('Thank you for getting in touch. We look forward to planning your wedding!');
+      } else {
+        alert('Please enter a valid phone number.');
+        }
+     }   
+    </script>  
+  </head>
+  <body>
+    <h1>Get in Touch</h1>
+    <h2>We're here to help you plan the best day of your life!</h2>
+    <p>To sign up for your free phone consultation and start planning your dream wedding, fill in the form below and a member of our team will get back to you at the date and time requested.</p>
+    <form>
+      <label for="name">Name:</label>
+      <input id="name" type="text"/>
+      <br/>
+      <label for="email">Email:</label>
+      <input id="email" type="text"/>
+      <br/>
+      <label for="phone">Phone:</label>
+      <input id="phone" type="number"/>
+      <br/>
+      <label for="fiance">Your Fiance(e)'s Name </label>
+      <input id="fiance" type="text"/>
+      <br/>
+      <label for="fiance-email">Your Fiance(e)'s Email:</label>
+      <input id="fiance-email" type="text"/>
+      <br/>
+      <label for="date">Wedding Date:</label>
+      <input id="date" type="date"/>
+      <br/>
+      <h3>Free Phone Consultation:</h3>
+      <p>Let us know the best time to get in touch.</p>
+      <br/>
+      <label for="consultation-date">Date:</label>
+      <input id="consultation-date" type="date"/>
+      <br/>
+      <label for="consultation-time">Time:</label>
+      <input id="consultation-time" type="time"/>
+      <br/>
+      <input id="button" type="button" value="Submit" onclick="telephoneCheck()"/>
+    </form> 
+  </body>  
+</html>  
