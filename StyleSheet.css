@@ -2,3 +2,27 @@
   margin: 0;
   padding: 0;
 }
+
+form {
+  margin: 0 20%;
+}
+
+#form-text {
+  padding: 20px 0;
+  text-align: center;
+  list-style-position: inside;
+}
+
+.left-column {
+  float: left;
+  width: 50%;
+}
+
+.right-column {
+  float: right;
+  width: 50%;
+}
+
+.full-width-input {
+  width: 100%;
+}
