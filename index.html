@@ -14,68 +14,122 @@
       } else {
         alert('Please enter a valid phone number.');
         }
-     }   
-    </script>  
+     }
+    </script>
   </head>
   <body>
-    <h1>Get in Touch</h1>
-    <h2>We're here to help you plan the best day of your life!</h2>
-    <p>Fill in the form below to start planning your dream wedding! We can't wait to hear from you!</p>
-    <p>In order for us to contact you, please provide a valid US phone number. Valid formats include:</p>
-    <ul>
-      <li>555-555-5555</li>
-      <li>(555)555-5555</li>
-      <li>555 555 5555</li>
-      <li>1 555 555 5555</li>
-    </ul>  
-    <form>
-      <label for="name">Name:</label>
-      <input id="name" type="text"/>
-      <br/>
-      <label for="email">Email:</label>
-      <input id="email" type="text"/>
-      <br/>
-      <label for="phone">Phone:</label>
-      <input id="phone" type="text"/>
-      <br/>
-      <label for="fiance">Your Fiance(e)'s Name </label>
-      <input id="fiance" type="text"/>
-      <br/>
-      <label for="fiance-email">Your Fiance(e)'s Email:</label>
-      <input id="fiance-email" type="text"/>
-      <br/>
-      <label for="budget">Wedding Budget:</label>
-      <input id="budget" type="text"/>
-      <br/>
-      <label for="date">Wedding Date:</label>
-      <input id="date" type="date"/>
-      <br/>
-      <p>How Can We Help?</p>
-      <label for="complete">
-        <input id="complete" type="radio" name="packages" value="complete-package"/>Complete Wedding Planning & Styling</label>
-      <br/>
-      <label for="styling">
-        <input id="styling" type="radio" name="packages" value="styling-package"/>Styling & Design</label>
-      <br/>
-      <label for="set-up">
-        <input id="set-up" type="radio" name="packages" value="set-up-package"/>Set-up & Coordination</label>
-      <br/>
-      <label for="venue">
-        <input id="venue" type="radio" name="packages" value="venue-package"/>Venue Search</label>
-      <br/>
-      <label for="message">Message:</label>
-      <input id="message" type="text"/>
-      <br/>
-      <p>Free Phone Consultation:</p>
-      <p>Let us know the best time to contact you.</p>
-      <br/>
-      <label for="consultation-date">Date:</label>
-      <input id="consultation-date" type="date"/>
-      <br/>
-      <label for="consultation-time">Time:</label>
-      <input id="consultation-time" type="time"/>
-      <br/>
-      <input id="button" type="button" value="Submit" onclick="telephoneCheck()"/>
-    </form> 
-  </body>  
-</html>  
+    <main>
+      <header>
+        <img/>
+      </header>
+
+      <form>
+        <section id="form-text">
+          <h1>Get in Touch</h1>
+          <h2>We're here to help you plan the best day of your life!</h2>
+          <p>Fill in the form below to start planning your dream wedding! We can't wait to hear from you!</p>
+          <p>In order for us to contact you, please provide a valid US phone number. Valid formats include:</p>
+          <ul>
+            <li>555-555-5555</li>
+            <li>(555)555-5555</li>
+            <li>555 555 5555</li>
+            <li>1 555 555 5555</li>
+          </ul>
+        </section>
+        <section id="form-input">
+          <div class="row">
+            <div class="left-column">
+              <label for="first-name">First Name:</label>
+                <br/>
+                <input id="first-name" class="full-width-input" type="text"/>
+                <br/>
+              </div>
+            <div class="right-column">
+              <label for="last-name">Last Name:</label>
+                <br/>
+                <input id="last-name" class="full-width-input" type="text"/>
+                <br/>
+            </div>
+          </div>  
+          <div class="row">
+            <label for="email">Email:</label>
+              <br/>
+              <input id="email" class="full-width-input" type="text"/>
+              <br/>
+          </div>
+          <div class="row">
+            <label for="phone">Phone:</label>
+              <br/>
+              <input id="phone" class="full-width-input" type="text"/>
+              <br/>
+          </div>
+          <div class="row">
+            <div class="left-column">
+              <label for="fiance-first">Your Fiance(e)'s Name </label>
+                <br/>
+                <input id="fiance-first" class="full-width-input" type="text"/>
+                <br/>
+            </div>
+            <div class="right-column">
+              <label for="fiance-last">Last Name </label>
+                <br/>
+                <input id="fiance-last" class="full-width-input" type="text"/>
+                <br/>
+            </div>
+          </div>
+          <div class="row">
+            <label for="fiance-email">Your Fiance(e)'s Email:</label>
+              <br/>
+              <input id="fiance-email" class="full-width-input" type="text"/>
+              <br/>
+          </div>
+          <div class="row">
+            <label for="budget">Wedding Budget:</label>
+              <br/>
+              <input id="budget" class="full-width-input" type="text"/>
+              <br/>
+          </div>
+          <div class="row">
+            <label for="date">Wedding Date:</label>
+              <br/>
+              <input id="date" type="date"/>
+              <br/>
+          </div>
+          <div id="package-type" class="row">
+            <p>How Can We Help?</p>
+            <label for="complete">
+              <input id="complete" type="radio" name="packages" value="complete-package"/>Complete Wedding Planning & Styling</label>
+              <br/>
+            <label for="styling">
+              <input id="styling" type="radio" name="packages" value="styling-package"/>Styling & Design</label>
+              <br/>
+            <label for="set-up">
+              <input id="set-up" type="radio" name="packages" value="set-up-package"/>Set-up & Coordination</label>
+              <br/>
+            <label for="venue">
+              <input id="venue" type="radio" name="packages" value="venue-package"/>Venue Search</label>
+              <br/>
+          </div>
+          <div class="row">
+            <label for="message">Message:</label>
+              <br/>
+              <input id="message" class="full-width-input" type="text"/>
+              <br/>
+          </div>
+          <div id="consultation" class="row">
+            <p>Free Phone Consultation:</p>
+            <p>Let us know the best time to contact you.</p>
+            <br/>
+            <label for="consultation-date">Date:</label>
+              <input id="consultation-date" type="date"/>
+              <br/>
+            <label for="consultation-time">Time:</label>
+              <input id="consultation-time" type="time"/>
+              <br/>
+          </div>
+          <input id="button" class="row" type="button" value="Submit" onclick="telephoneCheck()"/>
+        </section>
+      </form>
+    </main>
+  </body>
+</html>
