@@ -3,6 +3,7 @@
   <head>
     <title>Phone Number Validator</title>
     <link href="StyleSheet.css" type="text/css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Crimson+Text" type="text/css" rel="stylesheet"/>
     <script type="text/JavaScript">
     let telephoneCheck = () => {
       let str = document.getElementById("phone").value;
@@ -10,7 +11,7 @@
       let noSpaceStr = str.replace(spaces, '');
       let format = /^((\d{6})|(1\d{6})|(\d{3}-\d{3}-)|(\(\d{3}\)\d{3}-)|(1\d{3}-\d{3}-)|(1\(\d{3}\)\d{3}-))\d{4}$/;
       if (format.test(noSpaceStr)) {
-        alert('Thank you for getting in touch. We look forward to planning your wedding!');
+        alert('Thank you for getting in touch. We\'ll contact you on ' + str + ' to start planning your wedding!');
       } else {
         alert('Please enter a valid phone number.');
         }
@@ -20,14 +21,19 @@
   <body>
     <main>
       <header>
-        <img/>
+        <div id="img-container">
+          <img id="flowers-img" src="flowers5.png" alt="Bouquet of flowers."/>
+          <h1 id="header-text">C O N T A C T</h1>
+        </div>
       </header>
 
       <form>
         <section id="form-text">
-          <h1>Get in Touch</h1>
-          <h2>We're here to help you plan the best day of your life!</h2>
-          <p>Fill in the form below to start planning your dream wedding! We can't wait to hear from you!</p>
+          <h2 id="elegant-font">Get in Touch</h2>
+          <br/>
+          <h3>We're here to help you plan the best day of your life!</h3>
+          <br/>
+          <p>Fill in the form below to start planning your dream wedding!</p>
           <p>In order for us to contact you, please provide a valid US phone number. Valid formats include:</p>
           <ul>
             <li>555-555-5555</li>
@@ -39,85 +45,86 @@
         <section id="form-input">
           <div class="row split-row">
             <div>
-              <label for="first-name">First Name:</label>
+              <label for="first-name">FIRST NAME:</label>
                 <br/>
                 <input id="first-name" class="full-width-input" type="text"/>
-                <br/>                
+                <br/>
             </div>
             <div>
-              <label for="last-name">Last Name:</label>
+              <label for="last-name">LAST NAME:</label>
                 <br/>
                 <input id="last-name" class="full-width-input" type="text"/>
                 <br/>
             </div>
           </div>
           <div class="row">
-            <label for="email">Email:</label>
+            <label for="email">EMAIL:</label>
               <br/>
               <input id="email" class="full-width-input" type="text"/>
               <br/>
           </div>
           <div class="row">
-            <label for="phone">Phone:</label>
+            <label for="phone">PHONE:</label>
               <br/>
               <input id="phone" class="full-width-input" type="text"/>
               <br/>
           </div>
           <div class="row split-row">
             <div>
-              <label for="fiance-first">Your Fiance(e)'s Name </label>
+              <label for="fiance-first">YOUR FIANCE(E)'S NAME:</label>
                 <br/>
                 <input id="fiance-first" class="full-width-input" type="text"/>
                 <br/>
             </div>
             <div>
-              <label for="fiance-last">Last Name </label>
+              <label for="fiance-last">LAST NAME:</label>
                 <br/>
                 <input id="fiance-last" class="full-width-input" type="text"/>
                 <br/>
             </div>
           </div>
           <div class="row">
-            <label for="fiance-email">Your Fiance(e)'s Email:</label>
+            <label for="fiance-email">YOUR FIANCE(E)'S EMAIL:</label>
               <br/>
               <input id="fiance-email" class="full-width-input" type="text"/>
               <br/>
           </div>
           <div class="row">
-            <label for="budget">Wedding Budget:</label>
+            <label for="budget">WEDDING BUDGET:</label>
               <br/>
               <input id="budget" class="full-width-input" type="text"/>
               <br/>
           </div>
           <div class="row">
-            <label for="date">Wedding Date:</label>
+            <label for="date">WEDDING DATE:</label>
               <br/>
               <input id="date" type="date"/>
               <br/>
           </div>
           <div id="package-type" class="row">
-            <p>How Can We Help?</p>
+            <p>HOW CAN WE HELP YOU?</p>
+            <p>Please select the service you are interested in.</p>
             <label for="complete">
-              <input id="complete" type="radio" name="packages" value="complete-package"/>Complete Wedding Planning & Styling</label>
+              <input id="complete" type="radio" name="packages" value="complete-package"/> Complete Wedding Planning & Styling</label>
               <br/>
             <label for="styling">
-              <input id="styling" type="radio" name="packages" value="styling-package"/>Styling & Design</label>
+              <input id="styling" type="radio" name="packages" value="styling-package"/> Styling & Design</label>
               <br/>
             <label for="set-up">
-              <input id="set-up" type="radio" name="packages" value="set-up-package"/>Set-up & Coordination</label>
+              <input id="set-up" type="radio" name="packages" value="set-up-package"/> Set-up & Coordination</label>
               <br/>
             <label for="venue">
-              <input id="venue" type="radio" name="packages" value="venue-package"/>Venue Search</label>
+              <input id="venue" type="radio" name="packages" value="venue-package"/> Venue Search</label>
               <br/>
           </div>
           <div class="row">
-            <label for="message">Message:</label>
+            <label for="message">MESSAGE:</label>
               <br/>
-              <input id="message" class="full-width-input" type="text"/>
+              <textarea rows="6" id="message" class="full-width-input" type="text"></textarea>
               <br/>
           </div>
           <div id="consultation" class="row">
-            <p>Free Phone Consultation:</p>
+            <p>FREE PHONE CONSULTATION</p>
             <p>Let us know the best time to contact you.</p>
             <br/>
             <label for="consultation-date">Date:</label>
@@ -127,9 +134,17 @@
               <input id="consultation-time" type="time"/>
               <br/>
           </div>
-          <input id="button" class="row" type="button" value="Submit" onclick="telephoneCheck()"/>
+          <div id="button-container">
+            <input id="button" class="row" type="button" value="SUBMIT" onclick="telephoneCheck()"/>
+          </div>
         </section>
       </form>
     </main>
+
+    <footer>
+      <div id="color-block">
+      </div>
+    </footer>
+
   </body>
 </html>
